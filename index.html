@@ -101,17 +101,26 @@
     .pub { margin-bottom: 22px; text-wrap: pretty; }
     .co-first { color: #5b9bd5; font-style: italic; font-size: 12px; margin-left: 4px; }
     .pub-title { font-weight: 700; color: var(--ink); font-size: 15.5px; margin: 0 0 4px; line-height: 1.4; }
+    .pub-title em { font-style: italic; font-weight: 400; }
+    .pub-title strong { font-style: normal; font-weight: 700; }
     .pub-authors { margin: 0 0 4px; color: var(--sub); font-size: 13.5px; line-height: 1.5; }
     .pub-authors .me { color: var(--ink); }
     .pub-venue { margin: 0; font-size: 13.5px; line-height: 1.6; display: flex; align-items: center; flex-wrap: wrap; gap: 8px; color: var(--sub); }
     .pub-venue em { font-style: italic; }
+    .pub-venue strong { font-weight: 700; color: #3a3a3a; }
     .pub-note { margin: 4px 0 0; color: #666; font-size: 13.5px; text-wrap: pretty; }
 
+    .rank {
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 700;
+      white-space: nowrap;
+    }
     .badges { display: inline-flex; gap: 6px; align-items: center; flex-wrap: wrap; vertical-align: middle; }
     .badge-ccf {
-      display: inline-flex; align-items: center; padding: 2px 8px;
-      font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
-      color: #fff; background: var(--accent); border-radius: 4px;
+      display: inline-flex; align-items: center; padding: 0 2px;
+      font-size: 12px; font-weight: 700; font-style: normal; letter-spacing: 0.02em;
+      color: var(--accent); background: transparent; border-radius: 0;
       font-family: var(--sans); line-height: 1.4; white-space: nowrap;
     }
     .badge-link {
@@ -206,11 +215,14 @@
       <section id="news">
         <h2 class="sec"><span class="num">01</span><span>News</span><span class="rule"></span></h2>
         <ul class="dl">
-          <li><span class="key">Sep 2025</span><span>Organizing a tutorial <em>Identifying Software and Hardware Inefficiency at Scale</em> at <strong>IEEE CLUSTER '25</strong> (CCF-B).</span></li>
-          <li><span class="key">Aug 2025</span><span>Invited talk at HPC China — Performance Trace Tracking and Analysis Methods for Ultra-Large-Scale Supercomputing Systems (超大规模超算系统下的性能轨迹追踪与性能分析方法).</span></li>
-          <li><span class="key">Jul 2025</span><span>Our paper <strong>STAD</strong> was accepted to <em>IEEE TPDS</em>.</span></li>
-          <li><span class="key">Jun 2025</span><span>Our paper <strong>SimTrace</strong> was accepted to <em>ACM TACO</em>.</span></li>
-          <li><span class="key">Nov 2024</span><span>Our paper <strong>GVARP</strong> was accepted to <em>SC '24</em>.</span></li>
+          <li><span class="key">Jul 2026</span><span>Our paper <em>"Spatio-Temporal Evolving Anomaly Detection Tool for Large-Scale Heterogeneous Programs Analysis"</em> (<strong>HeSTEAD</strong>) was accepted to <strong><em>IEEE TPDS</em></strong> (<span class="rank">CCF-A</span>).</span></li>
+          <li><span class="key">Jun 2026</span><span>Our survey <em>"多并行尺度性能数据采集与分析方法综述"</em> was accepted to <strong><em>Journal of Software (软件学报)</em></strong> (Chinese core journal, <span class="rank">CCF-T1</span>).</span></li>
+          <li><span class="key">Jan 2026</span><span>Our paper <em>"Exploiting Synchronization-aware Transformer for Aligning Large-Scale MPI Traces"</em> (<strong>STAR</strong>) was accepted to <strong><em>Frontiers of Computer Science</em></strong> (<span class="rank">CCF-B</span>).</span></li>
+          <li><span class="key">Sep 2025</span><span>Organizing a tutorial <em>"Identifying Software and Hardware Inefficiency at Scale"</em> at <strong><em>IEEE CLUSTER '25</em></strong> (<span class="rank">CCF-B</span>).</span></li>
+          <li><span class="key">Aug 2025</span><span>Invited talk at <strong>HPC China</strong> — <em>"Performance Trace Tracking and Analysis Methods for Ultra-Large-Scale Supercomputing Systems"</em> (超大规模超算系统下的性能轨迹追踪与性能分析方法).</span></li>
+          <li><span class="key">Jul 2025</span><span>Our paper <em>"Identifying Performance Inefficiencies of Parallel Program With Spatial and Temporal Trace Analysis"</em> (<strong>STAD</strong>) was accepted to <strong><em>IEEE TPDS</em></strong> (<span class="rank">CCF-A</span>).</span></li>
+          <li><span class="key">Jun 2025</span><span>Our paper <em>"Exploiting Spatial and Temporal Sampling for Large-Scale Performance Analysis"</em> (<strong>SimTrace</strong>) was accepted to <strong><em>ACM TACO</em></strong> (<span class="rank">CCF-A</span>).</span></li>
+          <li><span class="key">Nov 2024</span><span>Our paper <em>"Detecting Performance Variance on Large-Scale Heterogeneous Systems"</em> (<strong>GVARP</strong>) was accepted to <strong><em>SC '24</em></strong> (<span class="rank">CCF-A</span>).</span></li>
         </ul>
       </section>
 
@@ -239,41 +251,41 @@
         <div id="pub-list-recent">
           <article class="pub">
   <div class="pub-body">
-    <h3 class="pub-title">Identifying Performance Inefficiencies of Parallel Program With Spatial and Temporal Trace Analysis</h3>
+    <h3 class="pub-title"><em>Identifying Performance Inefficiencies of Parallel Program With Spatial and Temporal Trace Analysis</em> (<strong>STAD</strong>)</h3>
     <p class="pub-authors"><span class="me">Zhibo Xuan</span>, Xin Sun, Xin You, Hailong Yang, Zhongzhi Luan, Yi Liu, Depei Qian</p>
-    <p class="pub-venue"><em>IEEE Transactions on Parallel and Distributed Systems, 2025</em><span class="badges"><span class="badge-ccf">CCF-A</span><a class="badge-link" href="https://doi.org/10.1109/TPDS.2025.3566735" aria-label="DOI"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span>DOI</span></a></span></p>
+    <p class="pub-venue"><em><strong>IEEE Transactions on Parallel and Distributed Systems</strong>, 2025</em><span class="badges"><span class="badge-ccf">CCF-A</span><a class="badge-link" href="https://doi.org/10.1109/TPDS.2025.3566735" aria-label="DOI"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span>DOI</span></a></span></p>
     <p class="pub-note">· Combines spatial and temporal trace analysis to pinpoint performance inefficiencies in large-scale parallel programs.</p>
   </div>
 </article>
           <article class="pub">
   <div class="pub-body">
-    <h3 class="pub-title">SimTrace: Exploiting Spatial and Temporal Sampling for Large-Scale Performance Analysis</h3>
+    <h3 class="pub-title"><em>Exploiting Spatial and Temporal Sampling for Large-Scale Performance Analysis</em> (<strong>SimTrace</strong>)</h3>
     <p class="pub-authors"><span class="me">Zhibo Xuan</span>, Xin You, Tianyu Feng, Hailong Yang, Zhongzhi Luan, Yi Liu, Depei Qian</p>
-    <p class="pub-venue"><em>ACM Transactions on Architecture and Code Optimization, 2025</em><span class="badges"><span class="badge-ccf">CCF-A</span><a class="badge-link" href="https://doi.org/10.1145/3720544" aria-label="DOI"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span>DOI</span></a></span></p>
+    <p class="pub-venue"><em><strong>ACM Transactions on Architecture and Code Optimization</strong>, 2025</em><span class="badges"><span class="badge-ccf">CCF-A</span><a class="badge-link" href="https://doi.org/10.1145/3720544" aria-label="DOI"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span>DOI</span></a></span></p>
     <p class="pub-note">· A sampling-based tracing framework that drastically reduces overhead while preserving diagnostic fidelity for HPC workloads.</p>
   </div>
 </article>
           <article class="pub">
   <div class="pub-body">
-    <h3 class="pub-title">GNNPerf: Towards Effective Performance Profiling and Analysis Across GNN Frameworks</h3>
+    <h3 class="pub-title"><em>Towards Effective Performance Profiling and Analysis Across GNN Frameworks</em> (<strong>GNNPerf</strong>)</h3>
     <p class="pub-authors">Kejie Ma, Hailong Yang, Zizheng Zhang, Xin You, <span class="me">Zhibo Xuan</span>, Qingxiao Sun, Zhongzhi Luan, Yi Liu, Depei Qian</p>
-    <p class="pub-venue"><em>IPDPS '25, 2025</em><span class="badges"><span class="badge-ccf">CCF-B</span><a class="badge-link" href="https://doi.org/10.1109/ipdps64566.2025.00079" aria-label="DOI"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span>DOI</span></a></span></p>
+    <p class="pub-venue"><em><strong>IPDPS '25</strong>, 2025</em><span class="badges"><span class="badge-ccf">CCF-B</span><a class="badge-link" href="https://doi.org/10.1109/ipdps64566.2025.00079" aria-label="DOI"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span>DOI</span></a></span></p>
     <p class="pub-note">· A cross-framework profiling tool that identifies and compares performance bottlenecks in GNN training pipelines.</p>
   </div>
 </article>
           <article class="pub">
   <div class="pub-body">
-    <h3 class="pub-title">Exploiting Synchronization-aware Transformer for Aligning Large-Scale MPI Traces</h3>
+    <h3 class="pub-title"><em>Exploiting Synchronization-aware Transformer for Aligning Large-Scale MPI Traces</em> (<strong>STAR</strong>)</h3>
     <p class="pub-authors"><span class="me">Zhibo Xuan</span>, Xin You, Hailong Yang, Haoran Kong, Jingqi Chen, Tianyu Feng, Zhongzhi Luan, Yi Liu, Depei Qian</p>
-    <p class="pub-venue"><em>Frontiers of Computer Science, 2025</em><span class="badges"><span class="badge-ccf">CCF-B</span></span></p>
+    <p class="pub-venue"><em><strong>Frontiers of Computer Science</strong>, 2026</em><span class="badges"><span class="badge-ccf">CCF-B</span></span></p>
     <p class="pub-note">· Leverages synchronization-aware transformers to efficiently align large-scale MPI traces for performance analysis.</p>
   </div>
 </article>
           <article class="pub">
   <div class="pub-body">
-    <h3 class="pub-title">GVARP: Detecting Performance Variance on Large-Scale Heterogeneous Systems</h3>
+    <h3 class="pub-title"><em>Detecting Performance Variance on Large-Scale Heterogeneous Systems</em> (<strong>GVARP</strong>)</h3>
     <p class="pub-authors">Xin You<sup>*</sup>, <span class="me">Zhibo Xuan</span><sup>*</sup>, Hailong Yang, Zhongzhi Luan, Yi Liu, Depei Qian<span class="co-first">* Equal contribution</span></p>
-    <p class="pub-venue"><em>SC '24, 2024</em><span class="badges"><span class="badge-ccf">CCF-A</span><a class="badge-link" href="https://doi.org/10.1109/SC41406.2024.00063" aria-label="DOI"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span>DOI</span></a></span></p>
+    <p class="pub-venue"><em><strong>SC '24</strong>, 2024</em><span class="badges"><span class="badge-ccf">CCF-A</span><a class="badge-link" href="https://doi.org/10.1109/SC41406.2024.00063" aria-label="DOI"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span>DOI</span></a></span></p>
     <p class="pub-note">· Lightweight profiler that pinpoints the root causes of run-to-run performance variance on large-scale heterogeneous GPU systems.</p>
   </div>
 </article>
@@ -281,49 +293,49 @@
         <div id="pub-list-rest" hidden>
           <article class="pub">
   <div class="pub-body">
-    <h3 class="pub-title">Exploiting Transformer-Based Static Binary Analysis for Identifying Inefficient Locks</h3>
+    <h3 class="pub-title"><em>Exploiting Transformer-Based Static Binary Analysis for Identifying Inefficient Locks</em></h3>
     <p class="pub-authors"><span class="me">Zhibo Xuan</span>, Xin You, Hailong Yang, Jingqi Chen, Zhongzhi Luan, Yi Liu, Depei Qian</p>
-    <p class="pub-venue"><em>NPC '25, 2025</em><span class="badges"><span class="badge-ccf">CCF-C</span></span></p>
+    <p class="pub-venue"><em><strong>NPC '25</strong>, 2025</em><span class="badges"><span class="badge-ccf">CCF-C</span></span></p>
     <p class="pub-note">· A transformer-based static binary analysis tool that detects inefficient lock usage and contention in multithreaded programs.</p>
   </div>
 </article>
           <article class="pub">
   <div class="pub-body">
-    <h3 class="pub-title">Hotspy: Identifying Performance Hotspot with Graph Neural Network Based Static Analysis</h3>
+    <h3 class="pub-title"><em>Identifying Performance Hotspot with Graph Neural Network Based Static Analysis</em> (<strong>Hotspy</strong>)</h3>
     <p class="pub-authors">Da Huo, Xin You, <span class="me">Zhibo Xuan</span>, Hailong Yang, Zhongzhi Luan, Depei Qian</p>
-    <p class="pub-venue"><em>CCF Transactions on High Performance Computing, 2025</em><span class="badges"></span></p>
+    <p class="pub-venue"><em><strong>CCF Transactions on High Performance Computing</strong>, 2025</em><span class="badges"><span class="badge-ccf">CCF-C</span></span></p>
     <p class="pub-note">· Uses graph neural networks for static analysis to identify performance hotspots without runtime profiling overhead.</p>
   </div>
 </article>
           <article class="pub">
   <div class="pub-body">
-    <h3 class="pub-title">Retrospection on the Performance Analysis Tools for Large-Scale HPC Programs</h3>
+    <h3 class="pub-title"><em>Retrospection on the Performance Analysis Tools for Large-Scale HPC Programs</em></h3>
     <p class="pub-authors"><span class="me">Zhibo Xuan</span>, Xin You, Hailong Yang, Mingzhen Li, Zhongzhi Luan, Yi Liu, Depei Qian</p>
-    <p class="pub-venue"><em>HiPC '24, 2024</em><span class="badges"><span class="badge-ccf">CCF-C</span></span></p>
+    <p class="pub-venue"><em><strong>HiPC '24</strong>, 2024</em><span class="badges"><span class="badge-ccf">CCF-C</span></span></p>
     <p class="pub-note">· A systematic survey and retrospective analysis of performance analysis tools for large-scale HPC programs.</p>
   </div>
 </article>
           <article class="pub">
   <div class="pub-body">
-    <h3 class="pub-title">gGMED: Towards GPU Accelerated Geometric Modeling Evaluation and Derivative Processes</h3>
+    <h3 class="pub-title"><em>Towards GPU Accelerated Geometric Modeling Evaluation and Derivative Processes</em> (<strong>gGMED</strong>)</h3>
     <p class="pub-authors"><span class="me">Zhibo Xuan</span>, Hailong Yang, Peng Wang, Xin Sun, Jie Hao, Siyuan Duan, Yiming Shi, Zhongzhi Luan, Depei Qian</p>
-    <p class="pub-venue"><em>Lecture Notes in Computer Science (APPT), 2024</em><span class="badges"><span class="badge-ccf">CCF-C</span></span></p>
+    <p class="pub-venue"><em><strong>Lecture Notes in Computer Science (APPT)</strong>, 2024</em><span class="badges"><span class="badge-ccf">CCF-C</span></span></p>
     <p class="pub-note">· Accelerates geometric modeling evaluation and derivative computation on GPUs for CAD/CAE applications.</p>
   </div>
 </article>
           <article class="pub">
   <div class="pub-body">
-    <h3 class="pub-title">Accelerating Big Data Application by Eliminating Redundancy on Hadoop Cluster</h3>
+    <h3 class="pub-title"><em>Accelerating Big Data Application by Eliminating Redundancy on Hadoop Cluster</em></h3>
     <p class="pub-authors">Ke Lei, Shitong Du, Xin You, <span class="me">Zhibo Xuan</span>, Haoyu Kong, Hailong Yang, Jingya Shang, Zhongzhi Xiao, Zheng Wu, Zhongzhi Luan, Depei Qian</p>
-    <p class="pub-venue"><em>ICPADS '23, 2023</em><span class="badges"><span class="badge-ccf">CCF-C</span></span></p>
+    <p class="pub-venue"><em><strong>ICPADS '23</strong>, 2023</em><span class="badges"><span class="badge-ccf">CCF-C</span></span></p>
     <p class="pub-note">· Identifies and eliminates redundant computation in Hadoop-based big data pipelines to improve cluster throughput.</p>
   </div>
 </article>
           <article class="pub">
   <div class="pub-body">
-    <h3 class="pub-title">PowerSpector: Towards Energy Efficiency with Calling-Context-Aware Profiling</h3>
+    <h3 class="pub-title"><em>Towards Energy Efficiency with Calling-Context-Aware Profiling</em> (<strong>PowerSpector</strong>)</h3>
     <p class="pub-authors">Xin You, Hailong Yang, <span class="me">Zhibo Xuan</span>, Zhongzhi Luan, Depei Qian</p>
-    <p class="pub-venue"><em>IPDPS '22, 2022</em><span class="badges"><span class="badge-ccf">CCF-B</span></span></p>
+    <p class="pub-venue"><em><strong>IPDPS '22</strong>, 2022</em><span class="badges"><span class="badge-ccf">CCF-B</span></span></p>
     <p class="pub-note">· A calling-context-aware energy profiler that attributes power consumption to code regions for guided optimization.</p>
   </div>
 </article>
@@ -340,7 +352,7 @@
       </section>
 
       <footer class="foot">
-        <span>Last updated May 2026.</span>
+        <span>Last updated Jun 2026.</span>
         <span>xzb@buaa.edu.cn</span>
       </footer>
     </main>
