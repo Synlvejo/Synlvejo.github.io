@@ -131,7 +131,7 @@
     }
     .badge-link:hover { border-color: #b0a99a; color: var(--ink); }
 
-    .pub-toggle {
+    .pub-toggle, .news-toggle {
       appearance: none; background: transparent; border: 0; padding: 6px 0;
       color: var(--accent); font: inherit; font-size: 13px; cursor: pointer;
       border-bottom: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
@@ -214,17 +214,20 @@
 
       <section id="news">
         <h2 class="sec"><span class="num">01</span><span>News</span><span class="rule"></span></h2>
-        <ul class="dl">
+        <ul class="dl" id="news-list-recent">
           <li><span class="key">Sep 2026</span><span>Our paper <em>"Auto-parallelizing Performance Trace Analysis with Trait-driven Compilation"</em> (<strong>ASPA</strong>) was accepted to <strong><em>EuroSys '27</em></strong> (<span class="rank">CCF-A</span>).</span></li>
           <li><span class="key">Jul 2026</span><span>Our paper <em>"Spatio-Temporal Evolving Anomaly Detection Tool for Large-Scale Heterogeneous Programs Analysis"</em> (<strong>HeSTEAD</strong>) was accepted to <strong><em>IEEE TPDS</em></strong> (<span class="rank">CCF-A</span>).</span></li>
           <li><span class="key">Jun 2026</span><span>Our survey <em>"多并行尺度性能数据采集与分析方法综述"</em> was accepted to <strong><em>Journal of Software (软件学报)</em></strong> (Chinese core journal, <span class="rank">CCF-T1</span>).</span></li>
           <li><span class="key">Jan 2026</span><span>Our paper <em>"Exploiting Synchronization-aware Transformer for Aligning Large-Scale MPI Traces"</em> (<strong>STAR</strong>) was accepted to <strong><em>Frontiers of Computer Science</em></strong> (<span class="rank">CCF-B</span>).</span></li>
           <li><span class="key">Sep 2025</span><span>Organizing a tutorial <em>"Identifying Software and Hardware Inefficiency at Scale"</em> at <strong><em>IEEE CLUSTER '25</em></strong> (<span class="rank">CCF-B</span>).</span></li>
+        </ul>
+        <ul class="dl" id="news-list-rest" hidden>
           <li><span class="key">Aug 2025</span><span>Invited talk at <strong>HPC China</strong> — <em>"Performance Trace Tracking and Analysis Methods for Ultra-Large-Scale Supercomputing Systems"</em> (超大规模超算系统下的性能轨迹追踪与性能分析方法).</span></li>
           <li><span class="key">Jul 2025</span><span>Our paper <em>"Identifying Performance Inefficiencies of Parallel Program With Spatial and Temporal Trace Analysis"</em> (<strong>STAD</strong>) was accepted to <strong><em>IEEE TPDS</em></strong> (<span class="rank">CCF-A</span>).</span></li>
           <li><span class="key">Jun 2025</span><span>Our paper <em>"Exploiting Spatial and Temporal Sampling for Large-Scale Performance Analysis"</em> (<strong>SimTrace</strong>) was accepted to <strong><em>ACM TACO</em></strong> (<span class="rank">CCF-A</span>).</span></li>
           <li><span class="key">Nov 2024</span><span>Our paper <em>"Detecting Performance Variance on Large-Scale Heterogeneous Systems"</em> (<strong>GVARP</strong>) was accepted to <strong><em>SC '24</em></strong> (<span class="rank">CCF-A</span>).</span></li>
         </ul>
+        <button class="news-toggle" id="news-toggle" aria-expanded="false" aria-controls="news-list-rest">↓ Show 4 more news items</button>
       </section>
 
       <section id="research">
@@ -369,22 +372,32 @@
 
   <script>
     (function() {
-      var btn = document.getElementById('pub-toggle');
-      if (!btn) return;
-      var rest = document.getElementById('pub-list-rest');
-      var n = 6;
-      btn.addEventListener('click', function() {
-        var open = rest.hasAttribute('hidden') === false;
-        if (open) {
-          rest.setAttribute('hidden', '');
-          btn.setAttribute('aria-expanded', 'false');
-          btn.textContent = '↓ Show ' + n + ' more publications';
-        } else {
-          rest.removeAttribute('hidden');
-          btn.setAttribute('aria-expanded', 'true');
-          btn.textContent = '↑ Show fewer publications';
+      function bindListToggle(buttonId, listId, itemLabel) {
+        var btn = document.getElementById(buttonId);
+        var rest = document.getElementById(listId);
+        if (!btn || !rest) return;
+        var n = rest.children.length;
+        if (!n) {
+          btn.hidden = true;
+          return;
         }
-      });
+        var collapsedLabel = '↓ Show ' + n + ' more ' + itemLabel;
+        btn.textContent = collapsedLabel;
+        btn.addEventListener('click', function() {
+          var open = rest.hasAttribute('hidden') === false;
+          if (open) {
+            rest.setAttribute('hidden', '');
+            btn.setAttribute('aria-expanded', 'false');
+            btn.textContent = collapsedLabel;
+          } else {
+            rest.removeAttribute('hidden');
+            btn.setAttribute('aria-expanded', 'true');
+            btn.textContent = '↑ Show fewer ' + itemLabel;
+          }
+        });
+      }
+      bindListToggle('news-toggle', 'news-list-rest', 'news items');
+      bindListToggle('pub-toggle', 'pub-list-rest', 'publications');
     })();
   </script>
 </body>
